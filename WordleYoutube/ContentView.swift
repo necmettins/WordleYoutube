@@ -8,9 +8,22 @@
 import SwiftUI
 
 struct ContentView: View {
+    @ObservedObject var wordleVM = WordleViewModel()
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        VStack{
+            ForEach(wordleVM.kelimeler){ kelime in
+                HStack{
+                    ForEach(0..<5){ index in
+                        Text(kelime.harfler[index])
+                            .frame(width: 50, height: 50)
+                            .background(Color.gray)
+                    }
+                }
+            }
+            Spacer()
+        }
+        
+        
     }
 }
 

@@ -11,6 +11,8 @@
 		15532D152867A7CA00991DBA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15532D142867A7CA00991DBA /* ContentView.swift */; };
 		15532D172867A7D300991DBA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15532D162867A7D300991DBA /* Assets.xcassets */; };
 		15532D1A2867A7D300991DBA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15532D192867A7D300991DBA /* Preview Assets.xcassets */; };
+		15532D212867A80400991DBA /* WordleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15532D202867A80400991DBA /* WordleModel.swift */; };
+		15532D232867A9C600991DBA /* WordleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15532D222867A9C600991DBA /* WordleViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,8 @@
 		15532D142867A7CA00991DBA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		15532D162867A7D300991DBA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		15532D192867A7D300991DBA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		15532D202867A80400991DBA /* WordleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordleModel.swift; sourceTree = "<group>"; };
+		15532D222867A9C600991DBA /* WordleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordleViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +59,8 @@
 				15532D142867A7CA00991DBA /* ContentView.swift */,
 				15532D162867A7D300991DBA /* Assets.xcassets */,
 				15532D182867A7D300991DBA /* Preview Content */,
+				15532D202867A80400991DBA /* WordleModel.swift */,
+				15532D222867A9C600991DBA /* WordleViewModel.swift */,
 			);
 			path = WordleYoutube;
 			sourceTree = "<group>";
@@ -138,7 +144,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				15532D152867A7CA00991DBA /* ContentView.swift in Sources */,
+				15532D232867A9C600991DBA /* WordleViewModel.swift in Sources */,
 				15532D132867A7CA00991DBA /* WordleYoutubeApp.swift in Sources */,
+				15532D212867A80400991DBA /* WordleModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
