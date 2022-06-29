@@ -56,11 +56,11 @@
 			isa = PBXGroup;
 			children = (
 				15532D122867A7CA00991DBA /* WordleYoutubeApp.swift */,
+				15532D202867A80400991DBA /* WordleModel.swift */,
+				15532D222867A9C600991DBA /* WordleViewModel.swift */,
 				15532D142867A7CA00991DBA /* ContentView.swift */,
 				15532D162867A7D300991DBA /* Assets.xcassets */,
 				15532D182867A7D300991DBA /* Preview Content */,
-				15532D202867A80400991DBA /* WordleModel.swift */,
-				15532D222867A9C600991DBA /* WordleViewModel.swift */,
 			);
 			path = WordleYoutube;
 			sourceTree = "<group>";
