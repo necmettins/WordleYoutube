@@ -22,7 +22,7 @@ struct WordleModel{
     }
     struct Kelime : Identifiable{
         let id : Int
-        var harfler = Array<String>(repeating: "N", count: 5)
+        var harfler = Array<String>(repeating: "", count: 5)
         var arkaPlanRengi = Array<Color>(repeating: Color.gray, count: 5)
         var isFaceUp = Array<Bool>(repeating: true, count: 5)
     }
