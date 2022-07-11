@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    @ObservedObject var wordleVM = WordleViewModel()
+    @StateObject var wordleVM = WordleViewModel()
     var body: some View {
         NavigationView{
             VStack(spacing: 1){
@@ -16,7 +16,7 @@ struct ContentView: View {
                     CardView(kelime: kelime)
                 }
                 Spacer()
-                KlavyeView()
+                KlavyeView().environmentObject(wordleVM)
             }
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {

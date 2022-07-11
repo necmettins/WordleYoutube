@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct KlavyeView: View {
+    @EnvironmentObject var wordleVM : WordleViewModel
     let üstSıra = "FGĞIODRNHP".map({String($0)})
     let ortaSıra = "UİEAÜTKMLYŞ".map({String($0)})
     let altSıra = "JÖVCÇZSB".map({String($0)})
@@ -41,31 +42,35 @@ struct KlavyeView: View {
                 .frame(width: 65, height: 60)
                 .background(Color.gray)
                 .foregroundColor(.primary)
-        }
+        }.disabled(wordleVM.tamamButonunuPasifYap)
+            .opacity(wordleVM.tamamButonunuPasifYap ? 0.4 : 1)
     }
     var GeriButonu : some View{
         Button {
-            
+            wordleVM.harfSil()
         } label: {
             Image(systemName: "delete.left.fill")
                 .frame(width: 40, height: 60)
                 .background(Color.gray)
                 .foregroundColor(.primary)
-        }
+        }.disabled(wordleVM.geriButonunuPasifYap)
+            .opacity(wordleVM.geriButonunuPasifYap ? 0.4 : 1)
 
     }
 }
 struct HarfView: View{
+    @EnvironmentObject var wordleVM : WordleViewModel
     var harf: String
     var body: some View{
         Button {
-            
+            wordleVM.harfEkle(harf)
         } label: {
             Text(harf)
                 .frame(width: 35, height: 60)
                 .background(Color.gray)
                 .foregroundColor(.primary)
-        }
+        }.disabled(wordleVM.harfleriPasifYap)
+            .opacity(wordleVM.harfleriPasifYap ? 0.4 : 1)
 
     }
 }

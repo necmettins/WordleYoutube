@@ -19,6 +19,15 @@ struct WordleModel{
     
     mutating func harfEkle(_ harf: String){
         girilenKelime += harf
+        girilenKelimeyiBeşHarfeTamamla()
+    }
+    mutating func harfSil(){
+        girilenKelime.removeLast()
+        girilenKelimeyiBeşHarfeTamamla()
+    }
+    mutating func girilenKelimeyiBeşHarfeTamamla(){
+        let girilenKelime = girilenKelime.padding(toLength: 5, withPad: " ", startingAt: 0)
+        kelimeler[0].harfler = girilenKelime.map{String($0)}
     }
     struct Kelime : Identifiable{
         let id : Int
