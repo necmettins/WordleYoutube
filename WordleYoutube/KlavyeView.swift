@@ -36,11 +36,11 @@ struct KlavyeView: View {
     }
     var TamamButonu : some View{
         Button {
-            
+            wordleVM.tamamButonu()
         } label: {
             Text("Tamam")
                 .frame(width: 65, height: 60)
-                .background(Color.gray)
+                .background(Color.lightGray)
                 .foregroundColor(.primary)
         }.disabled(wordleVM.tamamButonunuPasifYap)
             .opacity(wordleVM.tamamButonunuPasifYap ? 0.4 : 1)
@@ -51,7 +51,7 @@ struct KlavyeView: View {
         } label: {
             Image(systemName: "delete.left.fill")
                 .frame(width: 40, height: 60)
-                .background(Color.gray)
+                .background(Color.lightGray)
                 .foregroundColor(.primary)
         }.disabled(wordleVM.geriButonunuPasifYap)
             .opacity(wordleVM.geriButonunuPasifYap ? 0.4 : 1)
@@ -67,7 +67,7 @@ struct HarfView: View{
         } label: {
             Text(harf)
                 .frame(width: 35, height: 60)
-                .background(Color.gray)
+                .background(Color.lightGray)
                 .foregroundColor(.primary)
         }.disabled(wordleVM.harfleriPasifYap)
             .opacity(wordleVM.harfleriPasifYap ? 0.4 : 1)

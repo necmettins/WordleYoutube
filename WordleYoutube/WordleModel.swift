@@ -29,10 +29,13 @@ struct WordleModel{
         let girilenKelime = girilenKelime.padding(toLength: 5, withPad: " ", startingAt: 0)
         kelimeler[0].harfler = girilenKelime.map{String($0)}
     }
+    mutating func tersÇevir(index : Int){
+        kelimeler[0].isFaceUp[index].toggle()
+    }
     struct Kelime : Identifiable{
         let id : Int
         var harfler = Array<String>(repeating: "", count: 5)
-        var arkaPlanRengi = Array<Color>(repeating: Color.gray, count: 5)
+        var arkaPlanRengi = Array<Color>(repeating: Color.lightGray, count: 5)
         var isFaceUp = Array<Bool>(repeating: true, count: 5)
     }
 }

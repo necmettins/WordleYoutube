@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 class WordleViewModel : ObservableObject{
     @Published var model : WordleModel
     
@@ -18,6 +19,17 @@ class WordleViewModel : ObservableObject{
     }
     func harfSil(){
         model.harfSil()
+    }
+    func tamamButonu(){
+        for index in 0..<5{
+            DispatchQueue.main.asyncAfter(deadline: .now() + Double(index) * 0.2) {
+                withAnimation {
+                    self.model.tersÇevir(index: index)
+                }
+            }
+            
+            
+        }
     }
     var harfleriPasifYap : Bool{
         model.girilenKelime.count == 5

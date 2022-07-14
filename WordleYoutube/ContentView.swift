@@ -66,9 +66,13 @@ struct CardView: View {
     var body: some View {
         HStack(spacing: 1){
             ForEach(0..<5){ index in
-                Text(kelime.harfler[index])
-                    .frame(width: 60, height: 60)
-                    .background(Color.gray)
+                ZStack {
+                    Text(kelime.harfler[index])
+                        .frame(width: 60, height: 60)
+                        .rotation3DEffect(Angle.degrees(kelime.isFaceUp[index] ? 0 : -180), axis: (x: 1, y: 0, z: 0))
+                    
+                }.background(kelime.isFaceUp[index] ? Color.lightGray : Color.gray)
+                    .rotation3DEffect(Angle.degrees(kelime.isFaceUp[index] ? 0 : -180), axis: (x: 1, y: 0, z: 0))
             }
         }
     }
