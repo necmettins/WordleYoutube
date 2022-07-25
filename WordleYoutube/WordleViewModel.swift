@@ -21,6 +21,7 @@ class WordleViewModel : ObservableObject{
         model.harfSil()
     }
     func tamamButonu(){
+        model.harfleriKarşılaştır()
         for index in 0..<5{
             DispatchQueue.main.asyncAfter(deadline: .now() + Double(index) * 0.2) {
                 withAnimation {
@@ -30,6 +31,7 @@ class WordleViewModel : ObservableObject{
             
             
         }
+        
     }
     var harfleriPasifYap : Bool{
         model.girilenKelime.count == 5
@@ -42,5 +44,8 @@ class WordleViewModel : ObservableObject{
     }
     var kelimeler : Array<WordleModel.Kelime>{
         model.kelimeler
+    }
+    var klavyeRengi : [String: Color]{
+        model.klavyeRengi
     }
 }

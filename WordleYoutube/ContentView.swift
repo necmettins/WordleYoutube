@@ -71,7 +71,7 @@ struct CardView: View {
                         .frame(width: 60, height: 60)
                         .rotation3DEffect(Angle.degrees(kelime.isFaceUp[index] ? 0 : -180), axis: (x: 1, y: 0, z: 0))
                     
-                }.background(kelime.isFaceUp[index] ? Color.lightGray : Color.gray)
+                }.background(kelime.isFaceUp[index] ? Color.lightGray : kelime.arkaPlanRengi[index])
                     .rotation3DEffect(Angle.degrees(kelime.isFaceUp[index] ? 0 : -180), axis: (x: 1, y: 0, z: 0))
             }
         }

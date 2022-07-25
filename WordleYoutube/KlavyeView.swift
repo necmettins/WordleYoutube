@@ -67,7 +67,7 @@ struct HarfView: View{
         } label: {
             Text(harf)
                 .frame(width: 35, height: 60)
-                .background(Color.lightGray)
+                .background(wordleVM.klavyeRengi[harf] ?? Color.lightGray)
                 .foregroundColor(.primary)
         }.disabled(wordleVM.harfleriPasifYap)
             .opacity(wordleVM.harfleriPasifYap ? 0.4 : 1)
